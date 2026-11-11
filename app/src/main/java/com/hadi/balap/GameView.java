@@ -74,7 +74,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback, Run
             Canvas c = null;
             try {
                 c = getHolder().lockCanvas();
-                if (c != null) draw(c);
+                if (c != null) render(c);
             } finally {
                 if (c != null) getHolder().unlockCanvasAndPost(c);
             }
@@ -122,7 +122,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback, Run
     }
 
     // ---------- gambar ----------
-    private void draw(Canvas c) {
+    private void render(Canvas c) {
         c.drawColor(0xFF2E7D32);                       // rumput
         p.setStyle(Paint.Style.FILL);
         p.setColor(0xFF424242);                        // jalan
